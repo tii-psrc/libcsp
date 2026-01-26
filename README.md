@@ -12,7 +12,7 @@ git checkout psrc2025
 Install dependencies:
 
 ```
-sudo apt install libzmq3-dev libsocketcan-dev
+sudo apt install python-is-python3 libzmq3-dev libsocketcan-dev
 ```
 
 Configure WAF build tool:
