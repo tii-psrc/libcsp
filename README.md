@@ -3,32 +3,32 @@
 
 Clone the repo:
 
-``
+```
 git clone https://github.com/tii-psrc/libcsp.git
 cd libcsp/
 git checkout psrc2025
-``
+```
 
 Install dependencies:
 
-``
+```
 sudo apt install libzmq3-dev libsocketcan-dev
-``
+```
 
 Configure WAF build tool:
 
-``
+```
 $ ./waf configure
 Setting top to                           : /media/psf/git/libcsp 
 Setting out to                           : /media/psf/git/libcsp/build 
 Checking for 'gcc' (C compiler)          : /usr/bin/gcc 
 Checking for endianness                  : little 
 'configure' finished successfully (0.096s)
-``
+```
 
 Build of libCSP:
 
-``
+```
 $ ./waf build install
 Waf: Entering directory `/media/psf/git/libcsp/build'
 [ 1/42] Compiling src/csp_sfp.c
@@ -78,14 +78,14 @@ Waf: Leaving directory `/media/psf/git/libcsp/build'
 Waf: Entering directory `/media/psf/git/libcsp/build'
 Waf: Leaving directory `/media/psf/git/libcsp/build'
 'install' finished successfully (0.076s)
-``
+```
 
 Build examples:
 
-``
+```
 ./examples/buildall.py 
-``
+```
 
 # Original documentation
 
-[see here](./README.rst)
+[see here](./README-original.rst)
