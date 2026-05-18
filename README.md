@@ -9,13 +9,22 @@ cd libcsp/
 git checkout psrc2025
 ```
 
-Install dependencies:
+Install dependencies (for the host only):
 
 ```
 sudo apt install python-is-python3 libzmq3-dev libsocketcan-dev
 ```
 
-Configure WAF build tool:
+Configure WAF build tool (target/Polarfire version):
+
+```
+# source yocto SDK locally on the host
+source /opt/scai/0.1/environment-setup-riscv64-scai-linux
+
+./waf configure --enable-rdp --enable-crc32 --enable-hmac --with-os=posix --install-csp --enable-shlib --enable-promisc --enable-xtea --with-driver-usart=linux
+```
+
+Configure WAF build tool (host version):
 
 ```
 $ ./waf configure --enable-rdp --enable-crc32 --enable-hmac --enable-can-socket --with-os=posix --install-csp --enable-shlib --enable-promisc --enable-xtea --enable-python3-bindings --enable-if-zmqhub --with-driver-usart=linux
